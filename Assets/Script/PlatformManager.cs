@@ -6,6 +6,11 @@ public class PlatformManager : MonoBehaviour
 {
     public GameObject plat;
     public float wait = 3f;
+    public AudioSource platformUp;
+
+    private void Start()
+    {
+    }
 
     private void Update()
     {
@@ -17,7 +22,10 @@ public class PlatformManager : MonoBehaviour
 
     IEnumerator waitanimation()
     {
+        
         yield return new WaitForSeconds(wait);
+        platformUp.Play();
         plat.gameObject.SetActive(true);
+        
     }
 }

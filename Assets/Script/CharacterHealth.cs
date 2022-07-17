@@ -11,6 +11,7 @@ public class CharacterHealth : MonoBehaviour
     [SerializeField] private float flashLenght = 0f;
     private float flashCounter = 0f;
     private SpriteRenderer playerSprite;
+
     private void Start()
     {
         playerSprite = GetComponent<SpriteRenderer>();

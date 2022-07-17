@@ -7,8 +7,6 @@ public class DiceUpgrade : MonoBehaviour
     public int upgrade;
     public GameObject pressE;
     private DiceController dice;
-    public AudioClip diceSfx;
-    AudioSource sesdosyasi;
 
     private void Start()
     {
@@ -24,7 +22,6 @@ public class DiceUpgrade : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 dice.remainingDice += upgrade;
-                sesdosyasi.PlayOneShot(diceSfx);
                 Destroy(this.gameObject);
             }
         }
@@ -38,7 +35,6 @@ public class DiceUpgrade : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 dice.remainingDice += upgrade;
-                sesdosyasi.PlayOneShot(diceSfx);
                 Destroy(this.gameObject);
             }
         }
